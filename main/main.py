@@ -3,6 +3,8 @@ from flask import Flask, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 import requests
+from flask_cors import CORS  # Dodato
+from dataclasses import dataclass  # Dodato
 
 from producer import publish
 
