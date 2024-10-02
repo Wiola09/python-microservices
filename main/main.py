@@ -1,6 +1,4 @@
-from dataclasses import dataclass
-from flask import Flask, jsonify, abort
-from flask_cors import CORS
+from jinja2.utils import escape
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 import requests
