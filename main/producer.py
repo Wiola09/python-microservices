@@ -1,6 +1,10 @@
 import pika, json
+import os
 
-params = pika.URLParameters('your_rabbitmq_url')
+# Read RabbitMQ URL from environment variable
+rabbitmq_url = os.getenv('RABBITMQ_URL', 'default_rabbitmq_url')
+
+params = pika.URLParameters(rabbitmq_url)
 
 connection = pika.BlockingConnection(params)
 
